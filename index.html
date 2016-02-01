@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Predicting Miles per Gallon</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Predicting Miles per Gallon">
+  <meta name="author" content="Shuying Shen">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Predicting Miles per Gallon</h1>
+    <h2>Developing Data Product Project</h2>
+    <p>Shuying Shen<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>How much MPG?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Miles per Gallon depends on multiple factors. These factors include but not limit to:</p>
+
+<ol>
+<li>Weight of the car</li>
+<li>Transmission type</li>
+<li>Number of cylinders</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>MPG prediction made simple!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Now you can enter the weight, transmission type and number of cylinders and get MPG estimates in a simple and interactive fashion.</p>
+
+<p>This prediction model is developed from Motor Trend Car Road Tests dataset (mtcars). Here&#39;s the summary information of the model:</p>
+
+<pre><code class="r">model = lm(mpg~wt+am+as.factor(cyl)+wt:am, data=mtcars)
+summary(model)$coef
+</code></pre>
+
+<pre><code>##                  Estimate Std. Error   t value     Pr(&gt;|t|)
+## (Intercept)     29.774836  2.8403415 10.482836 7.870715e-11
+## wt              -2.398713  0.8439884 -2.842116 8.603904e-03
+## am              11.568790  4.0877912  2.830083 8.853842e-03
+## as.factor(cyl)6 -2.709777  1.3573517 -1.996370 5.646509e-02
+## as.factor(cyl)8 -4.776110  1.5558306 -3.069814 4.964603e-03
+## wt:am           -4.067981  1.3974151 -2.911075 7.295503e-03
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Here&#39;s how to use the tool</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>First go to <a href="https://shuying.shinyapps.io/project/">https://shuying.shinyapps.io/project/</a> and give it a try! You can:</p>
+
+<ol>
+<li>Enter a value for weight (assuming you are a reasonable person and do not believe in cars with negative weight). </li>
+<li>Choose the transmission type to be manual or automatic, and </li>
+<li>number of cylinders to be 4, 6 or 8. </li>
+<li>Once you hit the &quot;submit&quot; button. VOILA!</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Questions?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Thank you for trying this product out!</p>
+
+<p>If you are interested in the codes that generated the product, please go to <a href="https://github.com/shuyingshen/develop_data">https://github.com/shuyingshen/develop_data</a> for detail information. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='How much MPG?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='MPG prediction made simple!'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Here&#39;s how to use the tool'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Questions?'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

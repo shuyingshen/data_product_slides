@@ -1,0 +1,7 @@
+name: Publish Document
+account: rpubs
+server: rpubs.com
+bundleId:
+        https://api.rpubs.com/api/v1/document/149357/9d4b58823ec04fb995d8ab215eca2537
+url: http://rpubs.com/shuyingus/149357
+when: 1454294614.06369
